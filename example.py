@@ -19,15 +19,13 @@ price_BTC = getBTCValue(price_EUR, 'EUR')
 current_BTC_amount = check_BTC_balance(recieve_wallet)
 
 if current_BTC_amount >= price_BTC:
-    payment_status = 'The payment has gone through!'
+    payment_status = 'The payment has been made.'
 elif current_BTC_amount < price_BTC:
-    payment_status = 'We are still waiting for your transaction!'
+    payment_status = 'The payment has not been made.'
 
 # Simple example using print()
 
-print('------------')
 print(f'Your total for the painting is: {price_EUR}€')
 print(f'Amount to be paid in BTC: {price_BTC}')
 print(f'Send your payment here: {recieve_wallet}')
-print(payment_status)
-print('------------')
+print(f'Current status for the payment: {payment_status}')
