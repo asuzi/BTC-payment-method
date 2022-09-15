@@ -41,8 +41,8 @@ def generate_BTC_wallet():
     WIF = with_80b+checksum
     finished_WIF = base58.b58encode(WIF)
 
-    # Natiwe_Segwit_address is for PublicKey. This is your recieve address. Display it on your payment method page.
+    # Native_Segwit_address is for PublicKey. This is your recieve address. Display it on your payment method page.
     # privateKey.hex() is your private key. Do NOT share it!
     # Finished_WIF.decode("utf-8") is as important as your Private key. Do NOT share this. This is useful for importing the wallets into your own wallet system.
 
-    return Natiwe_Segwit_address, privateKey.hex(), finished_WIF.decode("utf-8")
+    return Native_Segwit_address, privateKey.hex(), finished_WIF.decode("utf-8")
